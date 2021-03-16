@@ -642,7 +642,8 @@ class Theme {
         const $fixedButtons = document.getElementById('fixed-buttons');
         const ACCURACY = 20, MINIMUM = 100;
         window.addEventListener('scroll', () => {
-            this.newScrollTop = this.util.getScrollTop();
+            try {
+                this.newScrollTop = this.util.getScrollTop();
             const scroll = this.newScrollTop - this.oldScrollTop;
             const isMobile = this.util.isMobile();
             this.util.forEach($headers, $header => {
@@ -672,6 +673,9 @@ class Theme {
             }
             for (let event of this.scrollEventSet) event();
             this.oldScrollTop = this.newScrollTop;
+            } catch (error) {
+                
+            }
         }, false);
     }
 
