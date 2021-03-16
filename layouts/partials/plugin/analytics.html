@@ -20,4 +20,3 @@
         {{- dict "Source" ($analytics.fathom.server | default "cdn.usefathom.com" | printf "https://%v/tracker.js") "Async" true "Attr" "id=fathom-script" | partial "plugin/script.html" -}}
     {{- end -}}
 {{- end -}}
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
