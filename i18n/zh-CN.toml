@@ -66,7 +66,7 @@ other = "zh_CN"
 other = "搜索"
 
 [searchPlaceholder]
-other = "搜索文章标题或内容..."
+other = "搜索失效了哈！建议放弃"
 
 [clear]
 other = "清空"
